@@ -1,8 +1,7 @@
 import mongoose from "mongoose";
+import dotenv from "dotenv";
+dotenv.config();
 
-const MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/sprint8";
+const MONGODB_URI = process.env.ATLAS_URI || "mongodb://localhost/sprint8";
 
-const db = mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+const db = mongoose.connect(MONGODB_URI);
