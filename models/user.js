@@ -28,6 +28,14 @@ const userSchema = new Schema({
         default: "OTHER",
         required: false,
     },
+    createdAt: {
+        type: Date,
+        default: Date.now,
+    },
+    updatedAt: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const User = model("User", userSchema);
