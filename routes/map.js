@@ -22,7 +22,6 @@ app.get("/maps", async (req, res) => {
 });
 
 app.post("/maps", async (req, res) => {
-    console.log(req.body);
     try {
         const newMap = new Map(req.body);
         const savedNewMap = await newMap.save();

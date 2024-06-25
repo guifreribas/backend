@@ -1,25 +1,22 @@
 import { Schema, model } from "mongoose";
 
-const mapSchema = new Schema({
-    name: {
+const calendarSchema = new Schema({
+    title: {
         type: String,
+        required: true,
+    },
+    start: {
+        type: Date,
+        required: true,
+    },
+    end: {
+        type: Date,
+        required: true,
+    },
+    allDay: {
+        type: Boolean,
+        default: false,
         required: false,
-    },
-    description: {
-        type: String,
-        required: false,
-    },
-    category: {
-        type: String,
-        required: true,
-    },
-    latitude: {
-        type: Number,
-        required: true,
-    },
-    longitude: {
-        type: Number,
-        required: true,
     },
     backgroundColor: {
         type: String,
@@ -34,6 +31,7 @@ const mapSchema = new Schema({
         default: Date.now,
     },
 });
-const Map = model("Map", mapSchema);
 
-export default Map;
+const Calendar = model("Calendar", calendarSchema);
+
+export default Calendar;
