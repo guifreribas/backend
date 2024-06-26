@@ -1,6 +1,6 @@
 # Backend
 
-This is the backend of the Sprint 8 project of the It Academy.
+This is the backend of the Sprint 8 project of the It Academy. You can find the frontend [here](https://github.com/guifreribas/frontend).
 
 ## Getting Started
 
@@ -17,7 +17,7 @@ To get a local copy up and running follow these simple steps.
 2.  Install dependencies
 
 ```sh
-npm install
+pnpm install
 ```
 
 3. You must create a .env file with the following variables:
@@ -29,7 +29,7 @@ ATLAS_URI=`[whith the uri of your Atlas cluster]`
 ### Running the app
 
 ```sh
-npm start
+pnpm start
 ```
 
 ## Authors
